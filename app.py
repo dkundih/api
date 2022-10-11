@@ -21,10 +21,10 @@ app.title = 'dkundih-promet'
 app.layout = html.Div([
     
     html.Div([
-    html.A("{APP RUNNING}"),
+    html.A(f"{dataFeed()}"),
     ], id = 'body'),
 
 ])
 
 if __name__ == '__main__':
-    app.run_server()
+    Timer(5.0, app.run_server())
