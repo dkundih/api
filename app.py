@@ -1,4 +1,4 @@
-from re import I
+from math import degrees
 import dash
 from dash import html
 from dash import dcc
@@ -6,15 +6,8 @@ from dash.exceptions import PreventUpdate
 from dash import Output, Input
 from threading import Timer
 from datetime import datetime
+import json
 import requests
-
-def dataFeed():
-    data = {"Time" : datetime.now()}
-    r = requests.post("https://httpbin.org/post", params = data)
-    f = r.text
-    Timer(5.0, dataFeed).start()
-    print(f)
-    return f
 
 #APP
 app = dash.Dash(__name__)
@@ -45,10 +38,10 @@ def dataFeed(num):
     if num == 0:
         raise PreventUpdate
     else:
-        data = {"Time" : datetime.now()}
-        r = requests.post("https://httpbin.org/post", data = data)
-        output = r.text
-        return [output]
+        time = datetime.now()
+        data = {"time" : time}
+        data = json.dumps(data, default=str)
+        return [data]
 
 if __name__ == '__main__':
     app.run_server()
