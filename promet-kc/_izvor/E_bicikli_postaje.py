@@ -2,7 +2,7 @@ import json
 
 točke = ['SVEUČILIŠTE SJEVER']
 
-fotografije = ['slike/bicikli.jpg']
+fotografije = ['slike/ebicikli.jpg']
 
 T_E_BICIKLI_OUTPUT = {}
 
