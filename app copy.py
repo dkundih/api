@@ -45,11 +45,10 @@ def dataFeed(num):
     if num == 0:
         raise PreventUpdate
     else:
-        time = datetime.now()
-        output = {
-            "time" : time
-        }
-        return(output)
+        data = {"Time" : datetime.now()}
+        r = requests.post("https://httpbin.org/post", data = data)
+        output = r.text
+        return [output]
 
 if __name__ == '__main__':
     app.run_server()
