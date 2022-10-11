@@ -14,16 +14,14 @@ def reformat(source, destination, count = 0):
         gj = json.load(f)
     features = gj['features']
 
-    nd = {}
+    nd = []
 
     for i in features[0]["geometry"]["coordinates"]:
-        nd[count] = [i[1], i[0]]
+        nd.append([i[1], i[0]])
         count += 1
-
 
     print(nd)
         
-
     with open(destination, "w", encoding = "utf-8",) as of:
         json.dump(nd, of, indent = 4)
 
