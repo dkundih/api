@@ -33,7 +33,7 @@ app.layout = html.Div([
         )
     ]),
     
-    html.Div(id = 'output', children = [], style = {"font-size" : 36}),
+    html.Div(id = 'output', children = [], style = {"font-size" : 10}),
 
 ])
 
