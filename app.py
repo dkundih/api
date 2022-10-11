@@ -33,7 +33,7 @@ app.layout = html.Div([
         )
     ]),
     
-    html.Div(id = 'output', children = [], style = {"font-size" : 16}),
+    html.Div(id = 'output', children = {}, style = {"font-size" : 16}),
 
 ])
 
@@ -46,10 +46,8 @@ def dataFeed(num):
         raise PreventUpdate
     else:
         time = datetime.now()
-        output = {
-            "time" : time
-        }
-        return(output)
+        output = time
+        return [output]
 
 if __name__ == '__main__':
     app.run_server()
