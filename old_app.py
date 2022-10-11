@@ -1,13 +1,10 @@
-from math import degrees
 import dash
 from dash import html
 from dash import dcc
 from dash.exceptions import PreventUpdate
 from dash import Output, Input
-from threading import Timer
 from datetime import datetime
 import json
-import requests
 
 #APP
 app = dash.Dash(__name__)
