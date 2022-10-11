@@ -24,7 +24,8 @@
             "14:45",
             "18:40",
             "19:20"
-        ]
+        ],
+        "FOTOGRAFIJA": "slike/autobusni.jpg"
     },
     "TRG MLADOSTI": {
         "X": 46.16200995953931,
@@ -51,7 +52,8 @@
             "14:48",
             "18:43",
             "19:23"
-        ]
+        ],
+        "FOTOGRAFIJA": "slike/mladosti.jpg"
     },
     "BOLNICA": {
         "X": 46.16115164434369,
@@ -78,7 +80,8 @@
             "14:54",
             "18:49",
             "19:29"
-        ]
+        ],
+        "FOTOGRAFIJA": "slike/bolnica.jpg"
     },
     "STADION": {
         "X": 46.16720768959876,
@@ -105,7 +108,8 @@
             "14:59",
             "18:54",
             "19:32"
-        ]
+        ],
+        "FOTOGRAFIJA": "slike/stadion.jpg"
     },
     "KAMPUS": {
         "X": 46.17588190577775,
@@ -132,6 +136,7 @@
             "15:03",
             "18:58",
             "19:34"
-        ]
+        ],
+        "FOTOGRAFIJA": "slike/kampus.jpg"
     }
 }

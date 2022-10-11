@@ -1,30 +1,37 @@
 {
-    "LENIŠĆE": {
+    "LENI\u0160\u0106E": {
         "X": 46.16211396847652,
-        "Y": 16.838210821151733
+        "Y": 16.838210821151733,
+        "FOTOGRAFIJA": "slike/bicikli.jpg"
     },
     "CERINE": {
         "X": 46.153300085443234,
-        "Y": 16.84282958507538
+        "Y": 16.84282958507538,
+        "FOTOGRAFIJA": "slike/bicikli.jpg"
     },
     "KAMPUS": {
         "X": 46.175625624805825,
-        "Y": 16.841724514961243
+        "Y": 16.841724514961243,
+        "FOTOGRAFIJA": "slike/bicikli.jpg"
     },
-    "ŽELJEZNIČKI KOLODVOR": {
+    "\u017dELJEZNI\u010cKI KOLODVOR": {
         "X": 46.165279512698916,
-        "Y": 16.818027198314667
+        "Y": 16.818027198314667,
+        "FOTOGRAFIJA": "slike/bicikli.jpg"
     },
     "GROBLJE": {
         "X": 46.16982310054389,
-        "Y": 16.81782066822052
+        "Y": 16.81782066822052,
+        "FOTOGRAFIJA": "slike/bicikli.jpg"
     },
     "ZRINSKI TRG": {
         "X": 46.16224775177566,
-        "Y": 16.83193176984787
+        "Y": 16.83193176984787,
+        "FOTOGRAFIJA": "slike/bicikli.jpg"
     },
     "DOM MLADIH": {
         "X": 46.162676889851134,
-        "Y": 16.826634407043457
+        "Y": 16.826634407043457,
+        "FOTOGRAFIJA": "slike/bicikli.jpg"
     }
 }
