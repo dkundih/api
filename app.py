@@ -33,7 +33,7 @@ app.layout = html.Div([
         )
     ]),
     
-    html.Div(id = 'output', children = {}, style = {"font-size" : 16}),
+    html.Div(id = 'output', children = [], style = {"font-size" : 16}),
 
 ])
 
@@ -45,8 +45,9 @@ def dataFeed(num):
     if num == 0:
         raise PreventUpdate
     else:
-        time = datetime.now()
-        output = time
+        data = {"Time" : datetime.now()}
+        r = requests.post("https://httpbin.org/post", data = data)
+        output = r.text
         return [output]
 
 if __name__ == '__main__':
