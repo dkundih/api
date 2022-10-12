@@ -27,9 +27,18 @@ app.add_middleware(Middleware)
 app.add_middleware(CORSMiddleware, allow_origins = origins)
 
 @app.get("/")
-async def hi():
+async def osnovno():
     datum = datetime.now().replace(microsecond=0).astimezone(pytz.timezone('Europe/Zagreb'))
     vrijeme = datum.time()
-    output = {"Pozdrav" : "Od Davida",
-              "Vrijeme" : vrijeme}
+    output = {"Pristup omogućuje" : "David Kundih",
+              "Izvorni kod" : "https://github.com/dkundih/api",
+              "Poslužuje" : "https://promet-kc.netlify.app // https://github.com/dkundih/promet-kc",
+              "Licenca" : "Apache 2.0",
+              "Vrijeme" : vrijeme,
+              }
+    return output
+
+@app.get("/meta")
+async def meta():
+    output = {"Upozorenje" : "Stvarno ne bi trebao biti na ovoj adresi (:",}
     return output
