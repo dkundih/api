@@ -8,5 +8,5 @@ app = FastAPI()
 def home():
     time = datetime.now()
     entry = {"Now" : time}
-    j_file = json.dumps(entry)
+    j_file = json.dumps(entry, default = str)
     return j_file
