@@ -30,5 +30,5 @@ async def hi():
     rn = datetime.now().replace(microsecond=0)
     now = rn.time()
     output = {"Pozdrav" : "Od Davida",
-              "Vrijeme:" : now}
+              "Vrijeme" : now}
     return output
