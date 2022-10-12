@@ -3,6 +3,7 @@ from fastapi import Request
 from fastapi.middleware.cors import CORSMiddleware 
 from datetime import datetime
 import time
+import pytz
 from starlette.middleware.base import BaseHTTPMiddleware
 
 app = FastAPI()
@@ -27,8 +28,8 @@ app.add_middleware(CORSMiddleware, allow_origins = origins)
 
 @app.get("/")
 async def hi():
-    rn = datetime.now().replace(microsecond=0)
-    now = rn.time()
+    datum = datetime.now().replace(microsecond=0).astimezone(pytz.timezone('Europe/Zagreb'))
+    vrijeme = datum.time()
     output = {"Pozdrav" : "Od Davida",
-              "Vrijeme" : now}
+              "Vrijeme" : vrijeme}
     return output
