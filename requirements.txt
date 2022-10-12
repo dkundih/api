@@ -26,3 +26,5 @@ Werkzeug==2.2.2
 zipp==3.8.1
 uvicorn==0.18.3
 fastapi
+pytz
+starlette
