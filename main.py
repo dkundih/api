@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi import Request
 from fastapi.middleware.cors import CORSMiddleware 
+import datetime
 import time
 from starlette.middleware.base import BaseHTTPMiddleware
 
@@ -15,11 +16,22 @@ class Middleware(BaseHTTPMiddleware):
         return response
     
 
-origins = ["https://dkundih-api.herokuapp.com", "http://127.0.0.1:8080", "https://promet-kc.netlify.app", "https://localhost:3000", "https://localhost:8000", "https://localhost:5000", "https://localhost:8080"]
+origins = ["https://dkundih-api.herokuapp.com",
+           "http://127.0.0.1:8080",
+           "https://promet-kc.netlify.app",
+           "https://localhost:3000",
+           "https://localhost:8000",
+           "https://localhost:5000",
+           "https://localhost:8080",
+           ]
 
 app.add_middleware(Middleware)
 app.add_middleware(CORSMiddleware, allow_origins = origins)
 
 @app.get("/")
 async def hi():
-    return {"Hello" : "World"}
+    rn = datetime.now().replace(microsecond=0)
+    now = time.time()    
+    return {"Pozdrav" : "David",
+            "Time" : str(now)}
+
