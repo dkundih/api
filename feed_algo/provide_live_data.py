@@ -5,7 +5,7 @@ import json
 
 def dataFeed():
     r = requests.get("https://dkundih-api.herokuapp.com/")
-    f = json.dumps(r.text)
+    f = r.text
     Timer(5.0, dataFeed).start()
     print(f)
     return f
